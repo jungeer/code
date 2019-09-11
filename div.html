@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+    .container {
+      height: 100%;
+      width: 100%;
+      /* font-size: 0;  解决 inline-block 带来的间隙问题*/
+    }
+    
+    /* 第一种 */
+    /* .left {
+      display: inline-block;
+      width: 300px;
+      height: 100%;
+      background-color: red;
+    }
+    .right {
+      display: inline-block;
+      width: calc(100% - 300px);
+      height: 100%;
+      background-color: yellow;
+    } */
+    /* 第一种结束 */
+
+    /* 第二种 */
+    /* .left {
+      float: left;
+      width: 300px;
+      height: 100%;
+      background-color: red;
+    }
+    .right {
+      margin-left: 300px;
+      width: calc(100% - 300px);
+      height: 100%;
+      background-color: yellow;
+    } */
+    /* 第二种结束 */
+
+    /* 第三种 */
+    /* .left {
+      position: absolute;
+      width: 300px;
+      height: 100%;
+      background-color: red;
+    }
+    .right {
+      position: absolute;
+      width: calc(100% - 300px);
+      height: 100%;
+      left: 300px;
+      background-color: yellow;
+    } */
+    /* 第三种结束 */
+
+    /* 第四种 */
+    .container {
+      display: flex;
+    }
+    .left {
+      width: 300px;
+      height: 100%;
+      background-color: red;
+    }
+    .right {
+      flex: 2;
+      height: 100%;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">a</div>
+    <div class="right">bdd</div>
+  </div>
+</body>
+</html>
